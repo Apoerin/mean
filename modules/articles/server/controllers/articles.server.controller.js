@@ -12,7 +12,13 @@ var path = require('path'),
  * Create an article
  */
 exports.create = function (req, res) {
-  var article = new Article(req.body);
+  var vm = this;
+  var article = new Article({
+    title: vm.title,
+    content: vm.content,
+    comment: vm.comment
+  });
+
   article.user = req.user;
 
   article.save(function (err) {

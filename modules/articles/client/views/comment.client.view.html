@@ -1,0 +1,11 @@
+<section>
+  <div class="form-group">
+    <label class="control-label" for="comment">Comment</label>
+    <div class="controls">
+      <textarea name="comment" data-ng-model="comment" id="comment" class="form-control" cols="30" rows="10" placeholder="Comment"ui-sref="add-comment" ui-sref-active="active"></textarea>
+    </div>
+    <button class="btn" type="submit"ui-sref="save-comment" ui-sref-active="active">Save</button>
+    <button ng-click="edit(comment, $index)" ui-sref="edit-comment" ui-sref-active="active">Edit</button>
+    <button ng-click="delete(comment, $index)" ui-sref="delete-comment" ui-sref-active="active">Delete</button>
+  </div>
+</section>
